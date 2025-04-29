@@ -199,6 +199,84 @@ img {
 .software-solutions-section .text-content li {
     color: var(--clr-black);
 }
+/* skill section */
+/* style.css */
+
+#skills {
+    /* Black to Purple Gradient Background */
+    background: linear-gradient(to bottom right, #595656, #381842, #c7b4d8); /* Black -> Vibrant Purple -> Lighter Purple */
+    padding: 80px 0; /* Add some vertical padding */
+    overflow-x: hidden; /* Prevent horizontal scrollbars sometimes caused by animations */
+    position: relative; /* Good for potential pseudo-elements later */
+}
+
+/* Optional: Add a subtle overlay pattern if desired */
+/* #skills::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('path/to/your/subtle-pattern.png');
+    opacity: 0.05;
+    z-index: 0;
+} */
+
+#skills .container {
+    position: relative; /* Ensure content stays above pseudo-elements */
+    z-index: 1;
+}
+
+
+#skills h2 {
+    color: #ffffff; /* White heading text */
+    margin-bottom: 15px; /* Space below heading */
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+#skills .section-title p {
+    color: rgba(255, 255, 255, 0.8); /* Slightly transparent white for subtitle */
+    margin-bottom: 50px;
+}
+
+.skill-item {
+    background-color: rgba(255, 255, 255, 0.08); /* Slightly transparent white background */
+    padding: 25px;
+    border-radius: 8px;
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+    height: 100%; /* Make items in the same row equal height if content differs */
+    display: flex; /* Use flexbox for alignment */
+    flex-direction: column;
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Subtle border */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+}
+
+.skill-item:hover {
+    transform: translateY(-10px); /* Lift effect on hover */
+    background-color: rgba(138, 43, 226, 0.3); /* Purple tint on hover */
+    border-color: rgba(255, 255, 255, 0.5);
+    box-shadow: 0 8px 25px rgba(138, 43, 226, 0.4); /* Glow effect on hover */
+}
+
+.skill-item h5 {
+    color: #ffffff; /* White skill name */
+    margin-bottom: 0; /* Remove default margin if needed */
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+/* Optional: Style for icons if you add them */
+.skill-item i {
+    font-size: 2.5rem; /* Example icon size */
+    color: #e0c3fc; /* A lighter purple for icons */
+    margin-bottom: 15px;
+    display: block; /* Ensure icon takes its own space */
+}
 
 /* ==========================
    Services Section
@@ -329,7 +407,7 @@ img {
 }
 
 .client-feedback-section .section-title { color: var(--clr-primary-darker); } /* Near black title */
-.testimonial-item { /* styles if needed */ }
+
 
 .client-name {
     font-weight: 700; font-size: 1.3rem; color: var(--clr-text-dark);
@@ -460,4 +538,75 @@ img {
     .contact-section .image-wrapper { max-width: 85%; }
     .contact-section .asterisk { width: 25%; max-width: 80px; bottom: -8%; }
     .social-icons a { font-size: 1.4rem; margin-right: 1rem; }
+}
+/* style.css */
+
+/* --- Counter Section Styles --- */
+#counters {
+    /* Black to Purple Gradient Background */
+    background: linear-gradient(135deg, #625c5c 0%, #361952 60%, #c4c2c9 100%);
+    padding: 80px 0;
+    position: relative;
+    overflow: hidden; /* Prevent overflow issues */
+    color: #ffffff; /* Default text color for the section */
+}
+
+/* Optional overlay */
+/* #counters::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5); /* Adjust darkness */
+    /* z-index: 1;
+} */
+
+#counters .container {
+    position: relative;
+    z-index: 2; /* Ensure content is above overlay */
+}
+
+.counter-box {
+    background-color: rgba(255, 255, 255, 0.05); /* Very subtle background */
+    padding: 30px 20px; /* Adjust padding as needed */
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+    height: 100%; /* Ensure boxes in a row are same height */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center content horizontally */
+    justify-content: center; /* Center content vertically */
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+    text-align: center; /* Ensure text inside is centered */
+}
+
+.counter-box:hover {
+     transform: translateY(-8px);
+     background-color: rgba(138, 43, 226, 0.2); /* Subtle purple tint on hover */
+     box-shadow: 0 8px 25px rgba(138, 43, 226, 0.3); /* Subtle glow */
+}
+
+.counter-box i {
+    font-size: 2.5rem; /* Icon size */
+    color: #c792ea;   /* Light purple for icons */
+    margin-bottom: 15px;
+    display: block; /* Ensure it takes space */
+}
+
+.counter-box .purecounter {
+    font-size: 2.8rem; /* Number size */
+    font-weight: 700;
+    display: block; /* Ensure it takes space */
+    line-height: 1.2;
+    color: #ffffff; /* White color for numbers */
+}
+
+.counter-box p {
+    font-size: 0.95rem;
+    color: rgba(255, 255, 255, 0.8); /* Slightly transparent white for label */
+    margin-top: 10px;
+    margin-bottom: 0;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
 }
